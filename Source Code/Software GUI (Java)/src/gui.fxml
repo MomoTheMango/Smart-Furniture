@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+   <children>
+      <AnchorPane fx:id="mainmenu" minHeight="0.0" minWidth="0.0" prefHeight="840.0" prefWidth="950.0" style="-fx-background-color: #6E6E6DFF;">
+         <children>
+            <Label fx:id="posturelabel" layoutX="121.0" layoutY="698.0" prefHeight="59.0" prefWidth="249.0" text="Not Seated">
+               <font>
+                  <Font name="Cambria" size="38.0" />
+               </font>
+            </Label>
+            <Label fx:id="postureadjust" layoutX="65.0" layoutY="744.0" prefHeight="93.0" prefWidth="385.0" text="No adjustments required" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="posturelevel" fitHeight="44.0" fitWidth="46.0" layoutX="61.0" layoutY="706.0">
+               <image>
+                  <Image url="resources/Images/main/grey.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="519.0" layoutY="698.0" prefHeight="59.0" prefWidth="240.0" text="Humidity level ">
+               <font>
+                  <Font name="Cambria" size="37.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="79.0" prefWidth="950.0" style="-fx-background-color: #3D4956;">
+               <children>
+                  <Label layoutX="84.0" layoutY="5.0" text="HOME VIEW" textFill="#b0b8b4">
+                     <font>
+                        <Font name="Arial Black" size="48.0" />
+                     </font>
+                  </Label>
+                  <ImageView layoutX="20.0" layoutY="15.0">
+                     <image>
+                        <Image url="resources/Images/main/homeicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="883.0" layoutY="15.0" onMouseClicked="#helpbutton">
+                     <image>
+                        <Image url="resources/Images/main/help.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="helppane" layoutX="603.0" minHeight="-Infinity" prefHeight="79.0" prefWidth="258.0" style="-fx-background-color: #B1B3B3FF; -fx-background-radius: 18 18 18 18; -fx-border-radius: 18 18 18 18;" visible="true">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" prefHeight="19.0" prefWidth="74.0" text="How to :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="17.0" layoutY="-15.0" prefHeight="120.0" prefWidth="225.0" text="- You can view detailed information &#10;   by clicking on the furniture icons." />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="883.0" layoutY="15.0" mnemonicParsing="false" onAction="#helpbutton" opacity="0.0" prefHeight="48.0" prefWidth="48.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="77.0" minHeight="0.0" minWidth="0.0" prefHeight="610.0" prefWidth="950.0" style="-fx-background-color: #3D4956;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="2.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="950.0" />
+                  <ImageView fx:id="chairicon" fitHeight="479.0" fitWidth="311.0" layoutX="82.0" layoutY="48.0" onMouseClicked="#maintochair">
+                     <image>
+                        <Image url="resources/Images/main/chairicon.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="760.0" layoutX="475.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="950.0" layoutX="475.0" layoutY="135.0" rotate="90.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <ImageView fx:id="closeticon" fitHeight="569.0" fitWidth="569.0" layoutX="434.0" layoutY="9.0" onMouseClicked="#maintochair">
+                     <image>
+                        <Image url="resources/Images/main/closeticon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttontochair" layoutX="84.0" layoutY="44.0" mnemonicParsing="false" onAction="#maintochair" opacity="0.0" prefHeight="486.0" prefWidth="311.0" text="Button" />
+                  <Button fx:id="buttontohumidity" layoutX="525.0" layoutY="82.0" mnemonicParsing="false" onAction="#maintohumidity" opacity="0.0" prefHeight="423.0" prefWidth="385.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="humiditystatus" layoutX="593.0" layoutY="759.0" prefHeight="59.0" prefWidth="234.0">
+               <font>
+                  <Font name="Cambria" size="37.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="humiditylevel" fitHeight="71.0" fitWidth="74.0" layoutX="509.0" layoutY="753.0">
+               <image>
+                  <Image url="resources/Images/main/greylarge.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
